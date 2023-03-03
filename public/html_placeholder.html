@@ -1,0 +1,385 @@
+<div class="user-reward-section">
+  <main>
+    <section class="top flx">
+      <div class="name">
+        <h1>Hey {{ customer.first_name }} {{ customer.last_name }}</h1>
+        <p>This is your SomniFix rewards system. Let’s take a look.</p>
+      </div>
+      <div class="notify flx">
+        <div class="notify_item flx" data-question='question1' style="display: none;">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyMCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMjQuNUMxMS4zNzUgMjQuNSAxMi41IDIzLjM3NSAxMi41IDIySDcuNUM3LjUgMjIuNjYzIDcuNzYzMzkgMjMuMjk4OSA4LjIzMjIzIDIzLjc2NzhDOC43MDEwNyAyNC4yMzY2IDkuMzM2OTYgMjQuNSAxMCAyNC41Wk0xNy41IDE3VjEwLjc1QzE3LjUgNi45MTI1IDE1LjQ1IDMuNyAxMS44NzUgMi44NVYyQzExLjg3NSAwLjk2MjUgMTEuMDM3NSAwLjEyNSAxMCAwLjEyNUM4Ljk2MjUgMC4xMjUgOC4xMjUgMC45NjI1IDguMTI1IDJWMi44NUM0LjUzNzUgMy43IDIuNSA2LjkgMi41IDEwLjc1VjE3TDAgMTkuNVYyMC43NUgyMFYxOS41TDE3LjUgMTdaIiBmaWxsPSIjRjJCNDEzIi8+PC9zdmc+" alt="ring">
+          <p>You have 20 pending Zees</p>
+          <a style="cursor: pointer;">Learn more</a>
+        </div>
+        <div class="notify_item flx" data-question='question2' style="display: none;">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyMCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMjQuNUMxMS4zNzUgMjQuNSAxMi41IDIzLjM3NSAxMi41IDIySDcuNUM3LjUgMjIuNjYzIDcuNzYzMzkgMjMuMjk4OSA4LjIzMjIzIDIzLjc2NzhDOC43MDEwNyAyNC4yMzY2IDkuMzM2OTYgMjQuNSAxMCAyNC41Wk0xNy41IDE3VjEwLjc1QzE3LjUgNi45MTI1IDE1LjQ1IDMuNyAxMS44NzUgMi44NVYyQzExLjg3NSAwLjk2MjUgMTEuMDM3NSAwLjEyNSAxMCAwLjEyNUM4Ljk2MjUgMC4xMjUgOC4xMjUgMC45NjI1IDguMTI1IDJWMi44NUM0LjUzNzUgMy43IDIuNSA2LjkgMi41IDEwLjc1VjE3TDAgMTkuNVYyMC43NUgyMFYxOS41TDE3LjUgMTdaIiBmaWxsPSIjRjJCNDEzIi8+PC9zdmc+" alt="ring">
+          <p>You have 20 pending Zees</p>
+          <a style="cursor: pointer;">Learn more</a>
+        </div>
+        <span class="next_btn"></span>
+      </div>
+    </section>
+
+    <section class="your_zees flx">
+      <div class="balance">
+        <div class="flx">
+          <div class="balance_points">
+            <h4>Your balance:</h4>
+            <p class="points">...<span>Zees</span></p>
+            <!-- <p class="look_history">View reward history</a> -->
+            </div>
+            <div class="unlocked_rewards">
+              <h4>reward categories:</h4>
+              <div class="flx">
+                <p class="unlock">-<span>Unlocked</span></p>
+                <p class="lock">-<span>Locked</span></p>
+              </div>
+              <a href="#unlock-more-zees-h2"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDkgMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUuNzAwMTUgNC44NTAwNVYyLjkwMDA1QzUuNzAwMTUgMi4xODUwNSA1LjE2MDE1IDEuNjAwMDUgNC41MDAxNSAxLjYwMDA1QzMuODQwMTUgMS42MDAwNSAzLjMwMDE1IDIuMTg1MDUgMy4zMDAxNSAyLjkwMDA1SDIuMTAwMTVDMi4xMDAxNSAxLjQ2MzU1IDMuMTc0MTUgMC4zMDAwNDkgNC41MDAxNSAwLjMwMDA0OUM1LjgyNjE1IDAuMzAwMDQ5IDYuOTAwMTUgMS40NjM1NSA2LjkwMDE1IDIuOTAwMDVWNC44NTAwNUg3LjUwMDE1QzcuODMwMTUgNC44NTAwNSA4LjEwMDE1IDUuMTQyNTUgOC4xMDAxNSA1LjUwMDA1VjEwLjA1QzguMTAwMTUgMTAuNDA3NSA3LjgzMDE1IDEwLjcgNy41MDAxNSAxMC43SDEuNTAwMTVDMS4xNzAxNSAxMC43IDAuOTAwMTQ2IDEwLjQwNzUgMC45MDAxNDYgMTAuMDVWNS41MDAwNUMwLjkwMDE0NiA1LjE0MjU1IDEuMTcwMTUgNC44NTAwNSAxLjUwMDE1IDQuODUwMDVINS43MDAxNVpNNS4xMDAxNSA5LjQwMDA1TDQuODg0MTUgOC4wMDI1NUM1LjE5MDE1IDcuODQ2NTUgNS40MDAxNSA3LjUxNTA1IDUuNDAwMTUgNy4xMjUwNUM1LjQwMDE1IDYuNTg1NTUgNC45OTgxNSA2LjE1MDA1IDQuNTAwMTUgNi4xNTAwNUM0LjAwMjE1IDYuMTUwMDUgMy42MDAxNSA2LjU4NTU1IDMuNjAwMTUgNy4xMjUwNUMzLjYwMDE1IDcuNTE1MDUgMy44MTAxNSA3Ljg0NjU1IDQuMTE2MTUgOC4wMDI1NUwzLjkwMDE1IDkuNDAwMDVINS4xMDAxNVoiIGZpbGw9IiM0MDkwRDEiLz48L3N2Zz4=" alt="lock">Unlock more Zees</a>
+            </div>
+          </div>
+          <div class="how_works">
+            <p>How it works:</p>
+            <ul>
+              <li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOS45OTk5MiAxOC4zMzM0QzEzLjMxMzMgMTguMzMzNCAxNi42NjY2IDE3LjE4ODQgMTYuNjY2NiAxNS4wMDAxVjUuMDAwMDhDMTYuNjY2NiAyLjgxMTc1IDEzLjMxMzMgMS42NjY3NSA5Ljk5OTkyIDEuNjY2NzVDNi42ODY1OSAxLjY2Njc1IDMuMzMzMjUgMi44MTE3NSAzLjMzMzI1IDUuMDAwMDhWMTUuMDAwMUMzLjMzMzI1IDE3LjE4ODQgNi42ODY1OSAxOC4zMzM0IDkuOTk5OTIgMTguMzMzNFpNOS45OTk5MiAxNi42NjY3QzYuODk4MjUgMTYuNjY2NyA0Ljk5OTkyIDE1LjU4NzYgNC45OTk5MiAxNS4wMDAxVjEzLjk0MzRDNi4yODQwOSAxNC42NDE3IDguMTQ3NDIgMTUuMDAwMSA5Ljk5OTkyIDE1LjAwMDFDMTEuODUyNCAxNS4wMDAxIDEzLjcxNTggMTQuNjQxNyAxNC45OTk5IDEzLjk0MzRWMTUuMDAwMUMxNC45OTk5IDE1LjU4NzYgMTMuMTAxNiAxNi42NjY3IDkuOTk5OTIgMTYuNjY2N1pNOS45OTk5MiAzLjMzMzQxQzEzLjEwMTYgMy4zMzM0MSAxNC45OTk5IDQuNDEyNTggMTQuOTk5OSA1LjAwMDA4QzE0Ljk5OTkgNS41ODc1OCAxMy4xMDE2IDYuNjY2NzUgOS45OTk5MiA2LjY2Njc1QzYuODk4MjUgNi42NjY3NSA0Ljk5OTkyIDUuNTg3NTggNC45OTk5MiA1LjAwMDA4QzQuOTk5OTIgNC40MTI1OCA2Ljg5ODI1IDMuMzMzNDEgOS45OTk5MiAzLjMzMzQxWk00Ljk5OTkyIDcuMjc2NzVDNi4yODQwOSA3Ljk3NTA4IDguMTQ3NDIgOC4zMzM0MiA5Ljk5OTkyIDguMzMzNDJDMTEuODUyNCA4LjMzMzQyIDEzLjcxNTggNy45NzUwOCAxNC45OTk5IDcuMjc2NzVWOC4zMzM0MkMxNC45OTk5IDguOTIwOTIgMTMuMTAxNiAxMC4wMDAxIDkuOTk5OTIgMTAuMDAwMUM2Ljg5ODI1IDEwLjAwMDEgNC45OTk5MiA4LjkyMDkyIDQuOTk5OTIgOC4zMzM0MlY3LjI3Njc1Wk00Ljk5OTkyIDEwLjYxMDFDNi4yODQwOSAxMS4zMDg0IDguMTQ3NDIgMTEuNjY2NyA5Ljk5OTkyIDExLjY2NjdDMTEuODUyNCAxMS42NjY3IDEzLjcxNTggMTEuMzA4NCAxNC45OTk5IDEwLjYxMDFWMTEuNjY2N0MxNC45OTk5IDEyLjI1NDIgMTMuMTAxNiAxMy4zMzM0IDkuOTk5OTIgMTMuMzMzNEM2Ljg5ODI1IDEzLjMzMzQgNC45OTk5MiAxMi4yNTQyIDQuOTk5OTIgMTEuNjY2N1YxMC42MTAxWiIgZmlsbD0iIzgwODA4MCIvPjwvc3ZnPg==" alt="data">Zee - is a reward unit for your love to SomniFix.</li>
+              <li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS41OTkyNSAxLjY2Njc4QzEuMzk2MDkgMS42NjY3OCAxLjIwMTI2IDEuNzU0NTggMS4wNTc2MSAxLjkxMDg2QzAuOTEzOTU1IDIuMDY3MTQgMC44MzMyNTIgMi4yNzkxIDAuODMzMjUyIDIuNTAwMTJDMC44MzMyNTIgMi43MjExMyAwLjkxMzk1NSAyLjkzMzA5IDEuMDU3NjEgMy4wODkzN0MxLjIwMTI2IDMuMjQ1NjUgMS4zOTYwOSAzLjMzMzQ1IDEuNTk5MjUgMy4zMzM0NUgzLjI5OTc1TDUuMzA5NzIgMTIuMDgzNEM1LjQ4MDUzIDEyLjgyNTEgNi4wOTEwMyAxMy4zMzM0IDYuNzkzNDUgMTMuMzMzNEgxNi4zNDU0QzE3LjAzNzEgMTMuMzMzNCAxNy42MjQ2IDEyLjgzMzQgMTcuODA2MSAxMi4xMDg0TDE5Ljc5MTYgNC4xNjY3OEgxOC4xODc2TDE2LjM0NDYgMTEuNjY2OEg2Ljc5MjY4TDQuNzgzNDggMi45MTY3OEM0LjcwMDQ4IDIuNTU3ODEgNC41MDkxNiAyLjIzOTUxIDQuMjQwMTQgMi4wMTI4OEMzLjk3MTEzIDEuNzg2MjQgMy42Mzk5OSAxLjY2NDM3IDMuMjk5NzUgMS42NjY3OEgxLjU5OTI1Wk0xNS4zODcxIDEzLjMzMzRDMTQuMTI3MSAxMy4zMzM0IDEzLjA4OTEgMTQuNDYyNiAxMy4wODkxIDE1LjgzMzRDMTMuMDg5MSAxNy4yMDQzIDE0LjEyNzEgMTguMzMzNCAxNS4zODcxIDE4LjMzMzRDMTYuNjQ3MiAxOC4zMzM0IDE3LjY4NTEgMTcuMjA0MyAxNy42ODUxIDE1LjgzMzRDMTcuNjg1MSAxNC40NjI2IDE2LjY0NzIgMTMuMzMzNCAxNS4zODcxIDEzLjMzMzRaTTguNDkzMTkgMTMuMzMzNEM3LjIzMzEzIDEzLjMzMzQgNi4xOTUyMSAxNC40NjI2IDYuMTk1MjEgMTUuODMzNEM2LjE5NTIxIDE3LjIwNDMgNy4yMzMxMyAxOC4zMzM0IDguNDkzMTkgMTguMzMzNEM5Ljc1MzI0IDE4LjMzMzQgMTAuNzkxMiAxNy4yMDQzIDEwLjc5MTIgMTUuODMzNEMxMC43OTEyIDE0LjQ2MjYgOS43NTMyNCAxMy4zMzM0IDguNDkzMTkgMTMuMzMzNFpNMTAuNzkxMiAxLjY2Njc4VjUuODMzNDVIOC40OTMxOUwxMS41NTcyIDkuMTY2NzhMMTQuNjIxMSA1LjgzMzQ1SDEyLjMyMzJWMS42NjY3OEgxMC43OTEyWk04LjQ5MzE5IDE1LjAwMDFDOC45MjUyMSAxNS4wMDAxIDkuMjU5MTggMTUuMzYzNCA5LjI1OTE4IDE1LjgzMzRDOS4yNTkxOCAxNi4zMDM0IDguOTI1MjEgMTYuNjY2OCA4LjQ5MzE5IDE2LjY2NjhDOC4wNjExNiAxNi42NjY4IDcuNzI3MTkgMTYuMzAzNCA3LjcyNzE5IDE1LjgzMzRDNy43MjcxOSAxNS4zNjM0IDguMDYxMTYgMTUuMDAwMSA4LjQ5MzE5IDE1LjAwMDFaTTE1LjM4NzEgMTUuMDAwMUMxNS44MTkxIDE1LjAwMDEgMTYuMTUzMSAxNS4zNjM0IDE2LjE1MzEgMTUuODMzNEMxNi4xNTMxIDE2LjMwMzQgMTUuODE5MSAxNi42NjY4IDE1LjM4NzEgMTYuNjY2OEMxNC45NTUxIDE2LjY2NjggMTQuNjIxMSAxNi4zMDM0IDE0LjYyMTEgMTUuODMzNEMxNC42MjExIDE1LjM2MzQgMTQuOTU1MSAxNS4wMDAxIDE1LjM4NzEgMTUuMDAwMVoiIGZpbGw9IiM4MDgwODAiLz48L3N2Zz4=" alt="cart">Collect Zees and use them to pay for SomniFix products.</li>
+              <li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOS4wODMyOSAxLjc1TDE3LjMzMjUgMi45MjkxN0wxOC41MTA4IDExLjE3OTJMMTAuODUwOCAxOC44MzkyQzEwLjY5NDUgMTguOTk1NCAxMC40ODI2IDE5LjA4MzIgMTAuMjYxNiAxOS4wODMyQzEwLjA0MDcgMTkuMDgzMiA5LjgyODczIDE4Ljk5NTQgOS42NzI0NiAxOC44MzkyTDEuNDIyNDYgMTAuNTg5MkMxLjI2NjIzIDEwLjQzMjkgMS4xNzg0NyAxMC4yMjEgMS4xNzg0NyAxMEMxLjE3ODQ3IDkuNzc5MDMgMS4yNjYyMyA5LjU2NzExIDEuNDIyNDYgOS40MTA4M0w5LjA4MzI5IDEuNzVaTTkuNjcyNDYgMy41MTgzM0wzLjE4OTk2IDEwTDEwLjI2MTYgMTcuMDcwOEwxNi43NDMzIDEwLjU4OTJMMTUuODYgNC40MDE2N0w5LjY3MjQ2IDMuNTE4MzNaTTExLjQzOTEgOC44MjE2N0MxMS4xMjY1IDguNTA4OTMgMTAuOTUwOSA4LjA4NDgyIDEwLjk1MSA3LjY0MjYyQzEwLjk1MSA3LjQyMzY3IDEwLjk5NDIgNy4yMDY4NyAxMS4wNzggNy4wMDQ2QzExLjE2MTggNi44MDIzMyAxMS4yODQ3IDYuNjE4NTUgMTEuNDM5NSA2LjQ2Mzc1QzExLjU5NDQgNi4zMDg5NSAxMS43NzgyIDYuMTg2MTcgMTEuOTgwNSA2LjEwMjQyQzEyLjE4MjggNi4wMTg2NyAxMi4zOTk2IDUuOTc1NTggMTIuNjE4NiA1Ljk3NTYyQzEzLjA2MDggNS45NzU3IDEzLjQ4NDggNi4xNTE0MyAxMy43OTc1IDYuNDY0MTdDMTQuMTEwMSA2Ljc3NjkgMTQuMjg1NyA3LjIwMTAyIDE0LjI4NTYgNy42NDMyMUMxNC4yODU1IDguMDg1NDEgMTQuMTA5OCA4LjUwOTQ2IDEzLjc5NyA4LjgyMjA4QzEzLjQ4NDMgOS4xMzQ3MSAxMy4wNjAyIDkuMzEwMjkgMTIuNjE4IDkuMzEwMjFDMTIuMTc1OCA5LjMxMDE0IDExLjc1MTcgOS4xMzQ0IDExLjQzOTEgOC44MjE2N1oiIGZpbGw9IiM4MDgwODAiLz48L3N2Zz4=" alt="label">You can pay 100% of price (get products for free!) of redeem partly.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rewards">
+          <h2>Rewards</h2>
+          <p></p>
+          <div class="flx">
+            <div class="reward" data-reward-id="13024" data-variant="32115046023283">
+              <div class="flx">
+                <img src="{{ '1pack.png' | asset_url }}" alt="pack">
+                <div>
+                  <p class="amount">-</p>
+                  <p>4-week pack</p>
+                </div>
+              </div>
+              <div class="percentage"><div class="complete-percent">-</div><span>completed</span>
+              <div class="progress_bar">
+                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="45" cy="45" r="42" stroke="#29C470" stroke-width="6"/>
+                </svg>
+              </div></div>
+              <button>Redeem now</button>
+            </div>
+            <div class="reward" data-reward-id="13025" data-variant="32115046056051">
+              <div class="flx">
+                <img src="{{ '3pack.png' | asset_url }}" alt="pack">
+                <div>
+                  <p class="amount">-</p>
+                  <p>12-week pack</p>
+                </div>
+              </div>
+              <div class="percentage"><div class="complete-percent">-</div><span>completed</span>
+              <div class="progress_bar">
+                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="45" cy="45" r="42" stroke="#29C470" stroke-width="6"/>
+                </svg>
+              </div></div>
+              <button>Redeem now</button>
+            </div>
+            <div class="reward" data-reward-id="13026" data-variant="32115046940787">
+              <div class="flx">
+                <img src="{{ '3pack.png' | asset_url }}" alt="pack">
+                <div>
+                  <p class="amount">-</p>
+                  <p>Annual pack</p>
+                </div>
+              </div>
+              <div class="percentage"><div class="complete-percent">-</div><span>completed</span>
+              <div class="progress_bar">
+                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="45" cy="45" r="42" stroke="#29C470" stroke-width="6"/>
+                </svg>
+              </div></div>
+              <button>Redeem now</button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="more_zees_loading" style="font-size: 36px;">
+        <div class="loader" style="margin: 0 auto;"></div>
+      </div>
+      <section class="more_zees" style="display: none;">
+        <h2 id="unlock-more-zees-h2">Unlock more Zees:</h2>
+        <div class="task" id="task-answer-question">
+          <div class="icon-wrapper">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NCA2NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIwLjE1Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTY0IDMyLjY1N0M2NCA0MS4xNDM5IDYwLjYyODYgNDkuMjgzMiA1NC42Mjc0IDU1LjI4NDRDNDguNjI2MyA2MS4yODU2IDQwLjQ4NjkgNjQuNjU3IDMyIDY0LjY1N0MyMy41MTMxIDY0LjY1NyAxNS4zNzM3IDYxLjI4NTYgOS4zNzI1OCA1NS4yODQ0QzMuMzcxNDIgNDkuMjgzMiAwIDQxLjE0MzkgMCAzMi42NTdDMCAyNC4xNzAxIDMuMzcxNDIgMTYuMDMwNyA5LjM3MjU4IDEwLjAyOTZDMTUuMzczNyA0LjAyODQgMjMuNTEzMSAwLjY1Njk4MiAzMiAwLjY1Njk4MkM0MC40ODY5IDAuNjU2OTgyIDQ4LjYyNjMgNC4wMjg0IDU0LjYyNzQgMTAuMDI5NkM2MC42Mjg2IDE2LjAzMDcgNjQgMjQuMTcwMSA2NCAzMi42NTdaTTI2LjI4IDI0Ljc4OUgyMUMyMC44OCAxNy4yNDUgMjYuNzIgMTQuNjU3IDMyLjAyNCAxNC42NTdDMzcuNjEyIDE0LjY1NyA0Mi43MTYgMTcuNTc3IDQyLjcxNiAyMy42MTdDNDIuNzE2IDI3LjkzNyA0MC4xNzYgMjkuOTkzIDM3Ljc0IDMxLjg0NUMzNC43OTIgMzQuMDgxIDMzLjcgMzQuOTE3IDMzLjcgMzcuNzg5VjM5LjIwOUgyOC40NjhMMjguNDQgMzcuMzU3QzI4LjI4OCAzMy42NDkgMzAuNDIgMzEuMzY1IDMzLjExMiAyOS40MDlDMzUuNDcyIDI3LjYzMyAzNi45NzIgMjYuNDY1IDM2Ljk3MiAyMy45MjVDMzYuOTcyIDIwLjYyNSAzNC40NiAxOS4yNTMgMzEuNzE2IDE5LjI1M0MyOC4xMTIgMTkuMjUzIDI2LjI4NCAyMS42NjUgMjYuMjg0IDI0Ljc4OUgyNi4yOFpNMzEuMjg0IDUwLjU2MUMyOC45NDggNTAuNTYxIDI3LjI0OCA0OC45ODUgMjcuMjQ4IDQ2Ljg1M0MyNy4yNDggNDQuNjQ1IDI4Ljk0OCA0My4wOTMgMzEuMjg4IDQzLjA5M0MzMy43MjQgNDMuMDkzIDM1LjQgNDQuNjQ1IDM1LjQgNDYuODUzQzM1LjQgNDguOTg1IDMzLjcyIDUwLjU2MSAzMS4yODQgNTAuNTYxWiIgZmlsbD0iIzFFNDE1RiIvPjwvZz48L3N2Zz4=" alt="question">
+          </div>
+          <div class="desc-wrapper">
+            <div class="descr">
+              <p class="title">Submit Answer to a question</p>
+              <p>Answer a question. Your feedback is very valuable because it helps us to improve the product.</p>
+            </div>
+          </div>
+          <div class="zees-wrapper">
+            <div class="amount">20 Zees</div>
+          </div>
+          <div class="action-wrapper">
+            <button class="btn_blue" style="display: none;">submit</button>
+            <div class="check-mark-wrapper" style="display: none;">
+              <span>Yaay!<br>Reward unlocked</span>
+            </div>
+          </div>
+        </div>
+        <div class="task" id="task-refer-friend">
+          <div class="icon-wrapper">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NCA2NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj48ZyBvcGFjaXR5PSIwLjE1IiBjbGlwLXBhdGg9InVybCgjY2xpcDEpIj48cGF0aCBkPSJNNjIuOTYxNCAyNC4zODY1TDQwLjk2MDkgNS4zODgzNUMzOS4wMzUxIDMuNzI1MjIgMzYgNS4wNzUzNSAzNiA3LjY1ODg1VjE3LjY2NTVDMTUuOTIxNCAxNy44OTUzIDAgMjEuOTE5NSAwIDQwLjk0NzdDMCA0OC42Mjc4IDQuOTQ3NjMgNTYuMjM2MyAxMC40MTY2IDYwLjIxNDJDMTIuMTIzMyA2MS40NTU2IDE0LjU1NTUgNTkuODk3NiAxMy45MjYzIDU3Ljg4NTNDOC4yNTgyNSAzOS43NTg3IDE2LjYxNDYgMzQuOTQ2NSAzNiAzNC42Njc2VjQ1LjY1N0MzNiA0OC4yNDQ1IDM5LjAzNzUgNDkuNTg4NiA0MC45NjA5IDQ3LjkyNzVMNjIuOTYxNCAyOC45Mjc1QzY0LjM0NTMgMjcuNzMyMiA2NC4zNDcxIDI1LjU4MzMgNjIuOTYxNCAyNC4zODY1WiIgZmlsbD0iIzFFNDE1RiIvPjwvZz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjY1Njk4MikiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iY2xpcDEiPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMC42NTY5ODIpIi8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+" alt="ref">
+          </div>
+          <div class="desc-wrapper">
+            <div class="descr">
+              <p class="title">Refer friends to SomniFix</p>
+              <p>Invite a friend and get 500 Zees after they make their first purchase. You need to send them your unique invitation direclly by copying the invitation link or share via social media. </p>
+            </div>
+          </div>
+          <div class="zees-wrapper">
+            <div class="amount">500 Zees</div>
+          </div>
+          <div class="action-wrapper">
+            <button class="btn_blue to_refer">Share</button>
+            <div class="check-mark-wrapper" style="display: none;">
+              <span>Yaay!<br>Reward unlocked</span>
+            </div>
+          </div>
+        </div>
+        <div class="task" id="task-birthday">
+          <div class="icon-wrapper">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NCA2NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj48ZyBvcGFjaXR5PSIwLjE1Ij48cGF0aCBkPSJNNi40OCA2MC4zMzgxQzYuNDggNjEuNjIwOCA3LjUxNjc1IDYyLjY1NyA4LjggNjIuNjU3SDI5LjUzNVYzNS40MTA2SDYuNDhWNjAuMzM4MVpNMzQuNDY1IDYyLjY1N0g1NS4yQzU2LjQ4MzIgNjIuNjU3IDU3LjUyIDYxLjYyMDggNTcuNTIgNjAuMzM4MVYzNS40MTA2SDM0LjQ2NVY2Mi42NTdaTTU4LjY4IDE4LjAxOTNINDcuOTc5QzQ4Ljk2NSAxNi40Njg2IDQ5LjU0NSAxNC42MjggNDkuNTQ1IDEyLjY1N0M0OS41NDUgNy4xNDI0OSA0NS4wNTcyIDIuNjU2OTggMzkuNTQgMi42NTY5OEMzNi41Mzg1IDIuNjU2OTggMzMuODM0MiAzLjk5MDMyIDMyIDYuMDkxNzZDMzAuMTY1NyAzLjk5MDMyIDI3LjQ2MTUgMi42NTY5OCAyNC40NiAyLjY1Njk4QzE4Ljk0MjcgMi42NTY5OCAxNC40NTUgNy4xNDI0OSAxNC40NTUgMTIuNjU3QzE0LjQ1NSAxNC42MjggMTUuMDI3OCAxNi40Njg2IDE2LjAyMSAxOC4wMTkzSDUuMzJDNC4wMzY3NSAxOC4wMTkzIDMgMTkuMDU1NSAzIDIwLjMzODFWMzAuNDgzMUgyOS41MzVWMTguMDE5M0gzNC40NjVWMzAuNDgzMUg2MVYyMC4zMzgxQzYxIDE5LjA1NTUgNTkuOTYzMiAxOC4wMTkzIDU4LjY4IDE4LjAxOTNaTTI5LjUzNSAxNy43Mjk0SDI0LjQ2QzIxLjY2MTUgMTcuNzI5NCAxOS4zODUgMTUuNDU0MSAxOS4zODUgMTIuNjU3QzE5LjM4NSA5Ljg1OTg4IDIxLjY2MTUgNy41ODQ1MiAyNC40NiA3LjU4NDUyQzI3LjI1ODUgNy41ODQ1MiAyOS41MzUgOS44NTk4OCAyOS41MzUgMTIuNjU3VjE3LjcyOTRaTTM5LjU0IDE3LjcyOTRIMzQuNDY1VjEyLjY1N0MzNC40NjUgOS44NTk4OCAzNi43NDE1IDcuNTg0NTIgMzkuNTQgNy41ODQ1MkM0Mi4zMzg1IDcuNTg0NTIgNDQuNjE1IDkuODU5ODggNDQuNjE1IDEyLjY1N0M0NC42MTUgMTUuNDU0MSA0Mi4zMzg1IDE3LjcyOTQgMzkuNTQgMTcuNzI5NFoiIGZpbGw9IiMxRTQxNUYiLz48L2c+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMC42NTY5ODIpIi8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+" alt="gift">
+          </div>
+          <div class="desc-wrapper">
+            <div class="descr">
+              <p class="title">A Gift for your Birthtday!</p>
+              <p>Add your Birthday and your present of 200 Zees will arrive X days before!</p>
+            </div>
+          </div>
+          <div class="zees-wrapper">
+            <div class="amount">200 Zees</div>
+          </div>
+          <div class="action-wrapper">
+            <button class="btn_blue to_birthday" style="display: none;">Add Birthday</button>
+            <div class="check-mark-wrapper" style="display: none;">
+              <span>Yaay!<br>Reward unlocked</span>
+            </div>
+          </div>
+        </div>
+        <div class="task" id="task-review">
+          <div class="icon-wrapper">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NCA2NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj48ZyBvcGFjaXR5PSIwLjE1Ij48cGF0aCBkPSJNNTMuMzMzMyA1Ljk5MDM2SDEwLjY2NjZDNy43MzMyNSA1Ljk5MDM2IDUuMzU5OTIgOC4zOTAzNiA1LjM1OTkyIDExLjMyMzdMNS4zMzMyNSA1OS4zMjM3TDE1Ljk5OTkgNDguNjU3SDUzLjMzMzNDNTYuMjY2NiA0OC42NTcgNTguNjY2NiA0Ni4yNTcgNTguNjY2NiA0My4zMjM3VjExLjMyMzdDNTguNjY2NiA4LjM5MDM2IDU2LjI2NjYgNS45OTAzNiA1My4zMzMzIDUuOTkwMzZaTTE1Ljk5OTkgMzcuOTkwNFYzMS40MDM3TDM0LjM0NjYgMTMuMDU3QzM0Ljg3OTkgMTIuNTIzNyAzNS43MDY2IDEyLjUyMzcgMzYuMjM5OSAxMy4wNTdMNDAuOTU5OSAxNy43NzdDNDEuNDkzMyAxOC4zMTA0IDQxLjQ5MzMgMTkuMTM3IDQwLjk1OTkgMTkuNjcwNEwyMi41ODY2IDM3Ljk5MDRIMTUuOTk5OVpNNDcuOTk5OSAzNy45OTA0SDI3Ljk5OTlMMzMuMzMzMyAzMi42NTdINDcuOTk5OVYzNy45OTA0WiIgZmlsbD0iIzFFNDE1RiIvPjwvZz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjY1Njk4MikiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" alt="review">
+          </div>
+          <div class="desc-wrapper">
+            <div class="descr">
+              <p class="title">Write a review</p>
+              <p>Add a review about the SomniFix strips so other people can better understand the product.</p>
+            </div>
+          </div>
+          <div class="zees-wrapper">
+            <div class="amount">50 Zees</div>
+          </div>
+          <div class="action-wrapper">
+            <button class="btn_blue" style="display: none;">Write a review</button>
+            <div class="check-mark-wrapper" style="display: none;">
+              <span>Yaay!<br>Reward unlocked</span>
+            </div>
+          </div>
+        </div>
+        <div class="task" id="task-upload-video">
+          <div class="icon-wrapper">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NCA2NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj48ZyBvcGFjaXR5PSIwLjE1Ij48cGF0aCBkPSJNNTcuMTAyMyAxOC40MzQ4SDYuODk3ODlDNi4wMTE0NyAxOC40MzQ4IDUuMTYxMzcgMTguNzg2OSA0LjUzNDU4IDE5LjQxMzdDMy45MDc3OSAyMC4wNDA1IDMuNTU1NjYgMjAuODkwNiAzLjU1NTY2IDIxLjc3N1Y1NC4yMDM3QzMuNTU1NjYgNTUuMDkwMSAzLjkwNzc5IDU1Ljk0MDIgNC41MzQ1OCA1Ni41NjdDNS4xNjEzNyA1Ny4xOTM4IDYuMDExNDcgNTcuNTQ1OSA2Ljg5Nzg5IDU3LjU0NTlINTcuMTAyM0M1Ny45ODg3IDU3LjU0NTkgNTguODM4OCA1Ny4xOTM4IDU5LjQ2NTYgNTYuNTY3QzYwLjA5MjQgNTUuOTQwMiA2MC40NDQ1IDU1LjA5MDEgNjAuNDQ0NSA1NC4yMDM3VjIxLjc3N0M2MC40NDQ1IDIwLjg5MDYgNjAuMDkyNCAyMC4wNDA1IDU5LjQ2NTYgMTkuNDEzN0M1OC44Mzg4IDE4Ljc4NjkgNTcuOTg4NyAxOC40MzQ4IDU3LjEwMjMgMTguNDM0OFpNNDIuOTg2OCAzOS40NjU5TDI1LjYxNzkgNDcuMjE3QzI1LjM0NzQgNDcuMzM4NiAyNS4wNTA5IDQ3LjM5MDYgMjQuNzU1MiA0Ny4zNjgzQzI0LjQ1OTUgNDcuMzQ2IDI0LjE3NDEgNDcuMjUgMjMuOTI1IDQ3LjA4OTNDMjMuNjc1OCA0Ni45Mjg1IDIzLjQ3MDkgNDYuNzA3OSAyMy4zMjg3IDQ2LjQ0NzdDMjMuMTg2NiA0Ni4xODc0IDIzLjExMTggNDUuODk1OCAyMy4xMTEyIDQ1LjU5OTNWMzAuMDk3QzIzLjExMTggMjkuODAwNSAyMy4xODY2IDI5LjUwODkgMjMuMzI4NyAyOS4yNDg2QzIzLjQ3MDkgMjguOTg4NCAyMy42NzU4IDI4Ljc2NzggMjMuOTI1IDI4LjYwN0MyNC4xNzQxIDI4LjQ0NjIgMjQuNDU5NSAyOC4zNTAzIDI0Ljc1NTIgMjguMzI4QzI1LjA1MDkgMjguMzA1NyAyNS4zNDc0IDI4LjM1NzcgMjUuNjE3OSAyOC40NzkzTDQyLjk4NjggMzYuMjEyNkM0My4zMDIyIDM2LjM1MTcgNDMuNTcwNSAzNi41Nzk1IDQzLjc1ODggMzYuODY4M0M0My45NDcgMzcuMTU3MiA0NC4wNDczIDM3LjQ5NDUgNDQuMDQ3MyAzNy44MzkzQzQ0LjA0NzMgMzguMTg0IDQzLjk0NyAzOC41MjE0IDQzLjc1ODggMzguODEwMkM0My41NzA1IDM5LjA5OSA0My4zMDIyIDM5LjMyNjggNDIuOTg2OCAzOS40NjU5WiIgZmlsbD0iIzFFNDE1RiIvPjxwYXRoIGQ9Ik01My41ODE5IDUuOTkwM0M1My41ODE5IDUuNTE4ODEgNTMuMzk0NiA1LjA2NjYyIDUzLjA2MTIgNC43MzMyMkM1Mi43Mjc5IDQuMzk5ODMgNTIuMjc1NyA0LjIxMjUyIDUxLjgwNDIgNC4yMTI1MkgxMi42OTMxQzEyLjIyMTYgNC4yMTI1MiAxMS43Njk0IDQuMzk5ODMgMTEuNDM2IDQuNzMzMjJDMTEuMTAyNiA1LjA2NjYyIDEwLjkxNTMgNS41MTg4MSAxMC45MTUzIDUuOTkwM1Y3Ljc2ODA4SDUzLjU4MTlWNS45OTAzWiIgZmlsbD0iIzFFNDE1RiIvPjxwYXRoIGQ9Ik01Ny4xMDIyIDEzLjEwMTRDNTcuMTAyMiAxMi42Mjk5IDU2LjkxNDkgMTIuMTc3NyA1Ni41ODE1IDExLjg0NDNDNTYuMjQ4MSAxMS41MTA5IDU1Ljc5NiAxMS4zMjM2IDU1LjMyNDUgMTEuMzIzNkg5LjEwMjI0QzguNjMwNzQgMTEuMzIzNiA4LjE3ODU2IDExLjUxMDkgNy44NDUxNiAxMS44NDQzQzcuNTExNzYgMTIuMTc3NyA3LjMyNDQ2IDEyLjYyOTkgNy4zMjQ0NiAxMy4xMDE0VjE0Ljg3OTJINTcuMTAyMlYxMy4xMDE0WiIgZmlsbD0iIzFFNDE1RiIvPjwvZz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjY1Njk4MikiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" alt="video">
+          </div>
+          <div class="desc-wrapper">
+            <div class="descr">
+              <p class="title">Upload a video</p>
+              <p>Make an unboxing video or how you are wearing the strips. We will add it on the reviews page other people can see the product.</p>
+            </div>
+          </div>
+          <div class="zees-wrapper">
+            <div class="amount">500 Zees</div>
+          </div>
+          <div class="action-wrapper">
+            <button class="btn_blue to_video_upload" style="display: none;">Upload video</button>
+            <div class="check-mark-wrapper" style="display: none;">
+              <span>Yaay!<br>Reward unlocked</span>
+            </div>
+          </div>
+        </div>
+        <div class="task" id="task-upload-selfy">
+          <div class="icon-wrapper">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NCA2NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj48ZyBvcGFjaXR5PSIwLjE1Ij48cGF0aCBkPSJNNTMgNTAuOTc3M1YxNC4zMzY3TDYwIDcuMzM2NjdWNTcuOTc3M0w1MyA1MC45NzczWk0xMy42Nzk3IDExLjY1N0w2LjY3OTY5IDQuNjU2OThINTcuMzIwM0w1MC4zMjAzIDExLjY1N0gxMy42Nzk3Wk0xMSA1MC45NzczTDQgNTcuOTc3M1Y3LjMzNjY3TDExIDE0LjMzNjdWNTAuOTc3M1pNNDkuNSA0Ny4yMDM5QzQ5LjUgNDcuNTY4NCA0OS4zNDUxIDQ3Ljg5NjYgNDkuMDM1MiA0OC4xODgyQzQ4LjcyNTMgNDguNDc5OSA0OC4yNTEzIDQ4LjcyNiA0Ny42MTMzIDQ4LjkyNjVDNDYuOTc1MyA0OS4xMjcgNDYuMzE5IDQ5LjMwMDIgNDUuNjQ0NSA0OS40NDZDNDQuOTcwMSA0OS41OTE5IDQ0LjExMzMgNDkuNzEwNCA0My4wNzQyIDQ5LjgwMTVDNDIuMDM1MiA0OS44OTI3IDQxLjEyMzcgNDkuOTY1NiA0MC4zMzk4IDUwLjAyMDNDMzkuNTU2IDUwLjA3NSAzOC41NjI1IDUwLjExMTQgMzcuMzU5NCA1MC4xMjk2QzM2LjE1NjIgNTAuMTQ3OSAzNS4yMzU3IDUwLjE1NyAzNC41OTc3IDUwLjE1N0gyOS40MDIzTDI2LjY0MDYgNTAuMTI5NkwyMy42NjAyIDUwLjAyMDNMMjAuOTI1OCA0OS44MDE1TDE4LjM1NTUgNDkuNDQ2TDE2LjM4NjcgNDguOTI2NUwxNC45NjQ4IDQ4LjE4ODJMMTQuNSA0Ny4yMDM5QzE0LjU3MjkgNDQuNjE1MyAxNS44OTQ1IDQyLjUzNzIgMTguNDY0OCA0MC45Njk1QzIxLjAzNTIgMzkuNDAxOCAyNC4zODAyIDM4LjQzNTYgMjguNSAzOC4wNzFWMzcuMzYwMUMyNi4wNTczIDM2LjU1OCAyNC4yNzk5IDM0LjkxNzQgMjMuMTY4IDMyLjQzODJDMjIuMDU2IDI5Ljk1OTEgMjEuNSAyNi45NTEzIDIxLjUgMjMuNDE0OEMyMS41IDIwLjcxNjkgMjIuNDc1MyAxOC42NjYxIDI0LjQyNTggMTcuMjYyNUMyNi4zNzYzIDE1Ljg1ODggMjguOTAxIDE1LjE1NyAzMiAxNS4xNTdDMzUuMDk5IDE1LjE1NyAzNy42MjM3IDE1Ljg1ODggMzkuNTc0MiAxNy4yNjI1QzQxLjUyNDcgMTguNjY2MSA0Mi41IDIwLjcxNjkgNDIuNSAyMy40MTQ4QzQyLjUgMzEuMzI2MyA0MC4xNjY3IDM1Ljk5MjkgMzUuNSAzNy40MTQ4VjM4LjA3MUMzOS42MTk4IDM4LjQzNTYgNDIuOTY0OCAzOS40MDE4IDQ1LjUzNTIgNDAuOTY5NUM0OC4xMDU1IDQyLjUzNzIgNDkuNDI3MSA0NC42MTUzIDQ5LjUgNDcuMjAzOVpNNTAuMzIwMyA1My42NTdMNTcuMzIwMyA2MC42NTdINi42Nzk2OUwxMy42Nzk3IDUzLjY1N0g1MC4zMjAzWiIgZmlsbD0iIzFFNDE1RiIvPjwvZz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjY1Njk4MikiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=" alt="photo">
+          </div>
+          <div class="desc-wrapper">
+            <div class="descr">
+              <p class="title">Upload a selfie wearing SomniFix </p>
+              <p>Add a selfie photo where you wear the strips. We will add it on the reviews page other people can see how the product fits.</p>
+            </div>
+          </div>
+          <div class="zees-wrapper">
+            <div class="amount">200 Zees</div>
+          </div>
+          <div class="action-wrapper">
+            <button class="btn_blue to_photo_upload" style="display: none;">Upload selfie</button>
+            <div class="check-mark-wrapper" style="display: none;">
+              <span>Yaay!<br>Reward unlocked</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="bg"></div>
+
+    <div class="history popup">
+      <div class="close_popup"></div>
+      <div class="tabs">
+        <p class="active">All Zees history</p>
+        <p>Referral invites history</p>
+      </div>
+      <div class="content">
+        <div class="zees_history active">
+          <p><span class="date">10/10/2020</span>Refer a friend to SomniFix<span class="quantity">500 Zees</span></p>
+          <p><span class="date">07/10/2020</span>Redeem 1000 Zees on SomniFix 4-week pack<span class="quantity spend">-1000 Zees</span></p>
+        </div>
+        <div class="ref_history">
+          <p><span class="date">10/10/2020</span>Refer a friend to SomniFix<span class="quantity">200 Zees</span></p>
+          <p><span class="date">07/10/2020</span>Refer a friend to SomniFix<span class="quantity">500 Zees</span></p>
+          <div class="share flx">
+            <p>Get more Zees by referring SomniFix to your friends:</p>
+            <div class="flx">
+              <div>
+                <p>Share via:</p>
+                <div class="flx">
+                  <a class="stamped-share-link" href="https://www.facebook.com/sharer/sharer.php?u=!!REF!!"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMjBDMCA4Ljk1NDMxIDguOTU0MzEgMCAyMCAwQzMxLjA0NTcgMCA0MCA4Ljk1NDMxIDQwIDIwQzQwIDMxLjA0NTcgMzEuMDQ1NyA0MCAyMCA0MEM4Ljk1NDMxIDQwIDAgMzEuMDQ1NyAwIDIwWiIgZmlsbD0iIzNCNTk5OCIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjIuMDg0OCAzMS43NTk2VjIwLjg3ODVIMjUuMDg4NEwyNS40ODY1IDE3LjEyODhIMjIuMDg0OEwyMi4wODk5IDE1LjI1MjFDMjIuMDg5OSAxNC4yNzQxIDIyLjE4MjggMTMuNzUwMSAyMy41ODc1IDEzLjc1MDFIMjUuNDY1MlYxMEgyMi40NjEyQzE4Ljg1MjggMTAgMTcuNTgyNyAxMS44MTkgMTcuNTgyNyAxNC44NzhWMTcuMTI5M0gxNS4zMzM1VjIwLjg3ODlIMTcuNTgyN1YzMS43NTk2SDIyLjA4NDhaIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="facebook"></a>
+                  <a class="stamped-share-link" href="https://twitter.com/intent/tweet?text=Check out SomniFix! They are offering a special deal so you'll get a discount off your next purchase! !!REF!!"><img src="data:image/svg;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMjBDMCA4Ljk1NDMxIDguOTU0MzEgMCAyMCAwQzMxLjA0NTcgMCA0MCA4Ljk1NDMxIDQwIDIwQzQwIDMxLjA0NTcgMzEuMDQ1NyA0MCAyMCA0MEM4Ljk1NDMxIDQwIDAgMzEuMDQ1NyAwIDIwWiIgZmlsbD0iIzU1QUNFRSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTkuNDAxIDE2LjI1NjNMMTkuNDQzIDE2Ljk0ODNMMTguNzQzNSAxNi44NjM2QzE2LjE5NzQgMTYuNTM4NyAxMy45NzMgMTUuNDM3MSAxMi4wODQ0IDEzLjU4NjlMMTEuMTYxMSAxMi42Njg5TDEwLjkyMzMgMTMuMzQ2OEMxMC40MTk3IDE0Ljg1OCAxMC43NDE0IDE2LjQ1NCAxMS43OTA3IDE3LjUyNzRDMTIuMzUwMyAxOC4xMjA1IDEyLjIyNDMgMTguMjA1MyAxMS4yNTkxIDE3Ljg1MjJDMTAuOTIzMyAxNy43MzkyIDEwLjYyOTUgMTcuNjU0NSAxMC42MDE2IDE3LjY5NjhDMTAuNTAzNiAxNy43OTU3IDEwLjgzOTQgMTkuMDgwOSAxMS4xMDUyIDE5LjU4OTRDMTEuNDY4OSAyMC4yOTU1IDEyLjIxMDQgMjAuOTg3NiAxMy4wMjE4IDIxLjM5NzJMMTMuNzA3MiAyMS43MjJMMTIuODk1OCAyMS43MzYxQzEyLjExMjQgMjEuNzM2MSAxMi4wODQ0IDIxLjc1MDIgMTIuMTY4NCAyMi4wNDY4QzEyLjQ0ODIgMjIuOTY0OSAxMy41NTM0IDIzLjkzOTQgMTQuNzg0NCAyNC4zNjMxTDE1LjY1MTggMjQuNjU5N0wxNC44OTY0IDI1LjExMTZDMTMuNzc3MiAyNS43NjEzIDEyLjQ2MjIgMjYuMTI4NSAxMS4xNDcxIDI2LjE1NjdDMTAuNTE3NiAyNi4xNzA5IDEwIDI2LjIyNzMgMTAgMjYuMjY5N0MxMCAyNi40MTEgMTEuNzA2NyAyNy4yMDE5IDEyLjcgMjcuNTEyNkMxNS42Nzk4IDI4LjQzMDYgMTkuMjE5MSAyOC4wMzUxIDIxLjg3NzIgMjYuNDY3NEMyMy43NjU4IDI1LjM1MTcgMjUuNjU0MyAyMy4xMzQzIDI2LjUzNTcgMjAuOTg3NkMyNy4wMTEzIDE5Ljg0MzYgMjcuNDg3IDE3Ljc1MzMgMjcuNDg3IDE2Ljc1MDZDMjcuNDg3IDE2LjEwMDkgMjcuNTI5IDE2LjAxNjIgMjguMzEyNCAxNS4yMzk0QzI4Ljc3NCAxNC43ODc0IDI5LjIwNzcgMTQuMjkzMSAyOS4yOTE2IDE0LjE1MTlDMjkuNDMxNSAxMy44ODM1IDI5LjQxNzUgMTMuODgzNSAyOC43MDQxIDE0LjEyMzZDMjcuNTE1IDE0LjU0NzMgMjcuMzQ3MSAxNC40OTA4IDI3LjkzNDYgMTMuODU1M0MyOC4zNjgzIDEzLjQwMzMgMjguODg1OSAxMi41ODQyIDI4Ljg4NTkgMTIuMzQ0MUMyOC44ODU5IDEyLjMwMTcgMjguNjc2MSAxMi4zNzIzIDI4LjQzODMgMTIuNDk5NEMyOC4xODY1IDEyLjY0MDcgMjcuNjI2OSAxMi44NTI1IDI3LjIwNzIgMTIuOTc5NkwyNi40NTE4IDEzLjIxOTdMMjUuNzY2MyAxMi43NTM3QzI1LjM4ODUgMTIuNDk5NCAyNC44NTY5IDEyLjIxNyAyNC41NzcxIDEyLjEzMjJDMjMuODYzNyAxMS45MzQ1IDIyLjc3MjUgMTEuOTYyNyAyMi4xMjkgMTIuMTg4N0MyMC4zODAzIDEyLjgyNDMgMTkuMjc1MSAxNC40NjI2IDE5LjQwMSAxNi4yNTYzWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=" alt="twitter"></a>
+                  <a class="stamped-share-link" href="https://www.facebook.com/v2.12/dialog/send?app_id=222664514734026&fallback_redirect_uri=!!REF!!&link=!!REF!!&redirect_uri=!!REF!!"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMjFDMSA5Ljk1NDMxIDkuOTU0MzEgMSAyMSAxQzMyLjA0NTcgMSA0MSA5Ljk1NDMxIDQxIDIxQzQxIDMyLjA0NTcgMzIuMDQ1NyA0MSAyMSA0MUM5Ljk1NDMxIDQxIDEgMzIuMDQ1NyAxIDIxWiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzAwODRGRiIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjEgOUMxNC4zNzI2IDkgOSAxMy45NzQ2IDkgMjAuMTExMUM5IDIzLjYwNzggMTAuNzQ1IDI2LjcyNjcgMTMuNDcyIDI4Ljc2MzVWMzNMMTcuNTU3OSAzMC43NTc2QzE4LjY0ODQgMzEuMDU5MyAxOS44MDM2IDMxLjIyMjIgMjEgMzEuMjIyMkMyNy42Mjc0IDMxLjIyMjIgMzMgMjYuMjQ3NiAzMyAyMC4xMTExQzMzIDEzLjk3NDYgMjcuNjI3NCA5IDIxIDlaTTIxLjg3NzIgMjMuNjY2N0wxOC44NjkyIDIwLjU0NjFMMTMgMjMuNjY2N0wxOS40NTYxIDE3TDIyLjUzNzUgMjAuMTIwNkwyOC4zMzMzIDE3TDIxLjg3NzIgMjMuNjY2N1oiIGZpbGw9IiMwMDg0RkYiLz48L3N2Zz4=" alt="messenger"></a>
+                  <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMjFDMSA5Ljk1NDMxIDkuOTU0MzEgMSAyMSAxQzMyLjA0NTcgMSA0MSA5Ljk1NDMxIDQxIDIxQzQxIDMyLjA0NTcgMzIuMDQ1NyA0MSAyMSA0MUM5Ljk1NDMxIDQxIDEgMzIuMDQ1NyAxIDIxWiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iI0Q1NEIzRCIvPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPjxwYXRoIGQ9Ik0zMS4zOTA3IDMwLjU1OThIMTAuNTE0NEM5LjcwNSAzMC41NTk4IDkuMDIzNDQgMjkuODYyNyA5LjAyMzQ0IDI4Ljk4NTZWMTMuMDY0MUM5LjAyMzM0IDEyLjIwOTUgOS42ODM2MiAxMS40ODk5IDEwLjUxNDQgMTEuNDg5OUgzMS4zOTA3QzMyLjIwMDEgMTEuNDg5OSAzMi44ODE5IDEyLjE4NyAzMi44ODE5IDEzLjA2NDFWMjguOTg1NkMzMi44ODE5IDI5Ljg2MjcgMzIuMjIxNSAzMC41NTk4IDMxLjM5MDcgMzAuNTU5OFoiIGZpbGw9IiNFM0UzRTMiLz48cGF0aCBvcGFjaXR5PSIwLjEiIGQ9Ik0xMi4wMDU0IDMwLjU1OTdMMjAuOTMxIDIyLjk4MTJMMjAuOTk1IDIyLjU3NjRMMTEuNzkyNCAxNS41ODI2TDExLjc3MSAzMC4yMjI0TDEyLjAwNTQgMzAuNTU5N1oiIGZpbGw9IiMyMzFGMjAiLz48cGF0aCBkPSJNMTAuNTE0NSAzMC41NjAyQzkuNjgzNzIgMzAuNTYwMiA5LjAyMzQ0IDI5Ljg2MzEgOS4wMjM0NCAyOC45ODZWMTMuMDQxOUM5LjAyMzQ0IDEyLjE2NDkgOS42ODM3MiAxMi4wMDc0IDEwLjUxNDUgMTIuMDA3NEMxMS4zNDUzIDEyLjAwNzQgMTIuMDA1NyAxMi4xODc0IDEyLjAwNTcgMTMuMDQxOVYzMC41NjAySDEwLjUxNDVaIiBmaWxsPSIjRDU0QjNEIi8+PHBhdGggZD0iTTEwLjUxNDQgMTIuMjMyM0MxMS41Nzk1IDEyLjIzMjMgMTEuNzkyNiAxMi41Njk3IDExLjc5MjYgMTMuMDQxOVYzMC4zMzUzSDEwLjUxNDRDOS44MTE1IDMwLjMzNTMgOS4yMzYzNCAyOS43MjgyIDkuMjM2MzQgMjguOTg2VjEzLjA0MTlDOS4yMzYzNCAxMi41NDcxIDkuNDQ5MzQgMTIuMjMyMyAxMC41MTQ0IDEyLjIzMjNaTTEwLjUxNDQgMTIuMDA3NEM5LjY4MzYyIDEyLjAwNzQgOS4wMjM0NCAxMi4xODc0IDkuMDIzNDQgMTMuMDQxOVYyOC45ODYxQzkuMDIzNDQgMjkuODYzMiA5LjY4MzcyIDMwLjU2MDMgMTAuNTE0NSAzMC41NjAzSDEyLjAwNTZWMTMuMDQxOUMxMi4wMDU2IDEyLjE2NDkgMTEuMzQ1MyAxMi4wMDc0IDEwLjUxNDQgMTIuMDA3NFoiIGZpbGw9IiNENzJCMjciLz48cGF0aCBkPSJNMzEuMzkwNiAzMC41NjAySDI5Ljg5OTRWMTIuOTk2OUMyOS44OTk0IDEyLjExOTkgMzAuNTU5OCAxMi4wMDc0IDMxLjM5MDYgMTIuMDA3NEMzMi4yMjE0IDEyLjAwNzQgMzIuODgxOCAxMi4xMTk5IDMyLjg4MTggMTIuOTk2OVYyOS4wMDg2QzMyLjg4MTggMjkuODYzMSAzMi4yMjE0IDMwLjU2MDIgMzEuMzkwNiAzMC41NjAyWiIgZmlsbD0iI0Q1NEIzRCIvPjxwYXRoIGQ9Ik0zMS4zOTA2IDEyLjIzMjNDMzIuMzQ5MiAxMi4yMzIzIDMyLjY2ODcgMTIuNDM0NyAzMi42Njg3IDEyLjk5NjlWMjkuMDA4NkMzMi42Njg3IDI5Ljc1MDYgMzIuMDkzNSAzMC4zNTc4IDMxLjM5MDYgMzAuMzU3OEgzMC4xMTI0VjEyLjk5NjlDMzAuMTEyNCAxMi40MTIyIDMwLjQzMiAxMi4yMzIzIDMxLjM5MDYgMTIuMjMyM1pNMzEuMzkwNiAxMi4wMDc0QzMwLjU1OTggMTIuMDA3NCAyOS44OTk0IDEyLjExOTkgMjkuODk5NCAxMi45OTY5VjMwLjU4MjhIMzEuMzkwNkMzMi4yMjE0IDMwLjU4MjggMzIuODgxOCAyOS44ODU1IDMyLjg4MTggMjkuMDA4NlYxMi45OTY5QzMyLjg4MTggMTIuMTE5OSAzMi4yMjE0IDEyLjAwNzQgMzEuMzkwNiAxMi4wMDc0WiIgZmlsbD0iI0Q3MkIyNyIvPjxwYXRoIGQ9Ik0yNC45OTk5IDMwLjU2MDFMOS4xNDc5NSAxMy42OTU4TDkuOTgxNzYgMTQuMDUzN0wyMS4wMTYzIDIyLjQ0MTlMMzIuODgxNyAxMy4yNTY4VjI5LjAwODVDMzIuODgxNyAyOS44NjMgMzIuMjIxMyAzMC41NjAxIDMxLjM5MDUgMzAuNTYwMUgyNC45OTk5WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPjxwYXRoIGQ9Ik0yMC45MzE0IDIyLjk4MTRMOS42NjI0OCAxNC4zNDZDOS4wMDIxIDEzLjgyODggOC44MTAzOCAxMi44MzkzIDkuMzAwMzIgMTIuMTQyMkM5Ljc5MDQ1IDExLjQ0NSAxMC43NDg5IDExLjI4NzcgMTEuNDMwNiAxMS44MDQ5TDIwLjk1MjggMTkuMTEzNUwzMC41Mzg2IDExLjcxNDhDMzEuMTk5IDExLjE5NzYgMzIuMTM2MyAxMS4zNTUxIDMyLjYyNjMgMTIuMDc0N0MzMy4xMTYyIDEyLjc3MTggMzIuOTY3MSAxMy43NjEzIDMyLjI4NTQgMTQuMjc4NUwyMC45MzEzIDIyLjk4MTNMMjAuOTMxNCAyMi45ODE0WiIgZmlsbD0iI0Q1NEIzRCIvPjxwYXRoIGQ9Ik0zMS4zOSAxMS42MjQ5QzMxLjc5NDcgMTEuNjI0OSAzMi4xNzgxIDExLjgyNzMgMzIuNDMzOCAxMi4xODdDMzIuODM4NSAxMi43OTQzIDMyLjcxMDcgMTMuNjI2MyAzMi4xNTY4IDE0LjA3NjFMMjAuOTMwNiAyMi43MTE2TDkuNzg5NSAxNC4xNjYxQzkuMjE0MzUgMTMuNzE2MyA5LjA2NTE5IDEyLjg2MTcgOS40Njk5MSAxMi4yNzcxQzkuNzA0MjggMTEuOTM5NyAxMC4xMDkgMTEuNzE0OSAxMC41MzUgMTEuNzE0OUMxMC44MTE5IDExLjcxNDkgMTEuMDg4OSAxMS44MDQ4IDExLjMwMTkgMTEuOTg0N0wyMC44MDI4IDE5LjI3MDhMMjAuOTMwNiAxOS4zNjA5TDIxLjA1ODMgMTkuMjcwOEwzMC42MjMxIDExLjg3MjNDMzAuODU3NSAxMS43MTQ5IDMxLjExMyAxMS42MjQ5IDMxLjM5IDExLjYyNDlaTTMxLjM5IDExLjRDMzEuMDkxOCAxMS40IDMwLjc3MjIgMTEuNDkgMzAuNTE2NiAxMS42OTI0TDIwLjkzMDYgMTkuMDkwOUwxMS40MDg0IDExLjc4MjNDMTEuMTUyOSAxMS41OCAxMC44MzM0IDExLjQ5IDEwLjUxMzggMTEuNDlDMTAuMDQ1MiAxMS40OSA5LjU3NjUgMTEuNzE0OCA5LjI3ODI4IDEyLjE0MjJDOC44MDk2MyAxMi44MzkyIDkuMDAxMzUgMTMuODI4NyA5LjY2MTcyIDE0LjM0NTlMMjAuOTMwNyAyMy4wMDRMMzIuMjYzMyAxNC4yNzg1QzMyLjkyMzcgMTMuNzYxMyAzMy4wNzI5IDEyLjc5NDMgMzIuNjA0MiAxMi4wNzQ3QzMyLjMwNiAxMS42MjQ5IDMxLjg1ODYgMTEuNCAzMS4zOSAxMS40WiIgZmlsbD0iI0Q3MkIyNyIvPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSI5LjE0ODkiIHkxPSIyMS45MDgxIiB4Mj0iMzIuODg5MyIgeTI9IjIxLjkwODEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLW9wYWNpdHk9IjAuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIwLjIiLz48L2xpbmVhckdyYWRpZW50PjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIxOS4yIiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOSAxMS40KSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==" alt="gmail"></a>
+                </div>
+              </div>
+              <p>or</p>
+              <button class="btn_blue copy-ref-link-button">Copy my unique link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="questions popup">
+      <div class="close_popup"></div>
+      <h2>Answer a question</h2>
+      <div class="question active">
+        <p>Your feedback is very valuable because it helps us to improve the product.</p>
+        <div class="question__inner" data-question='question1'>
+          <p class="text">What type of exercise do you like to do?</p>
+          <div id="answer-wrapper-text">
+            <textarea name="answer" id="answer" placeholder="Type your answer here"></textarea>
+          </div>
+        </div>
+
+        <div class="question__inner" data-question='question2'>
+          <p class="text" style='text-align: center'>How many hours of sleep do you get per night?</p>
+
+          <div id="answer-wrapper-select">
+            <div class="answer-variant">5 and less</div>
+            <div class="answer-variant">About 6-7</div>
+            <div class="answer-variant">8 and more</div>
+          </div>
+        </div>
+  
+        <button class="btn_blue">submit</button>
+      </div>
+      <div class="submit_answer">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgiIGhlaWdodD0iMzciIHZpZXdCb3g9IjAgMCAzOCAzNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMC40NzI5IDE4LjVDMC40NzI5IDguMjgyNzMgOC43NTU2MyAwIDE4Ljk3MjkgMEMyOS4xOTAyIDAgMzcuNDcyOSA4LjI4MjczIDM3LjQ3MjkgMTguNUMzNy40NzI5IDI4LjcxNzMgMjkuMTkwMiAzNyAxOC45NzI5IDM3QzguNzU1NjMgMzcgMC40NzI5IDI4LjcxNzMgMC40NzI5IDE4LjVaIiBmaWxsPSIjMjlDNDcwIi8+PHBhdGggZD0iTTkuOTcyOSAxOEwxNi45NzI5IDI1LjVMMjguNDcyOSAxMi41IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==" alt="confirm">
+        <p>Congartulations!<br>
+        Reward successfully unlocked.</p>
+        <div class="amount">200 Zees</div>
+        <p>Meet 200 Zees on your balance!</p>
+        <button class="btn_blue">got it</button>
+      </div>
+    </div>
+
+    <div class="refer popup">
+      <div class="close_popup"></div>
+      <h2>Refer friends to SomniFix</h2>
+      <p>Invite a friend and get 500 Zees after they make their first purchase using your unique invitation link. You will be notified in the customer cabinet when Zees arrive. </p>
+      <p>Share my unique invitation via:</p>
+      <div class="flx">
+        <a class="stamped-share-link" href="https://www.facebook.com/sharer/sharer.php?u=!!REF!!"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMjBDMCA4Ljk1NDMxIDguOTU0MzEgMCAyMCAwQzMxLjA0NTcgMCA0MCA4Ljk1NDMxIDQwIDIwQzQwIDMxLjA0NTcgMzEuMDQ1NyA0MCAyMCA0MEM4Ljk1NDMxIDQwIDAgMzEuMDQ1NyAwIDIwWiIgZmlsbD0iIzNCNTk5OCIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjIuMDg0OCAzMS43NTk2VjIwLjg3ODVIMjUuMDg4NEwyNS40ODY1IDE3LjEyODhIMjIuMDg0OEwyMi4wODk5IDE1LjI1MjFDMjIuMDg5OSAxNC4yNzQxIDIyLjE4MjggMTMuNzUwMSAyMy41ODc1IDEzLjc1MDFIMjUuNDY1MlYxMEgyMi40NjEyQzE4Ljg1MjggMTAgMTcuNTgyNyAxMS44MTkgMTcuNTgyNyAxNC44NzhWMTcuMTI5M0gxNS4zMzM1VjIwLjg3ODlIMTcuNTgyN1YzMS43NTk2SDIyLjA4NDhaIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="facebook"></a>
+        <a class="stamped-share-link" href="https://twitter.com/intent/tweet?text=Check out SomniFix! They are offering a special deal so you'll get a discount off your next purchase! !!REF!!"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMjBDMCA4Ljk1NDMxIDguOTU0MzEgMCAyMCAwQzMxLjA0NTcgMCA0MCA4Ljk1NDMxIDQwIDIwQzQwIDMxLjA0NTcgMzEuMDQ1NyA0MCAyMCA0MEM4Ljk1NDMxIDQwIDAgMzEuMDQ1NyAwIDIwWiIgZmlsbD0iIzU1QUNFRSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTkuNDAxIDE2LjI1NjNMMTkuNDQzIDE2Ljk0ODNMMTguNzQzNSAxNi44NjM2QzE2LjE5NzQgMTYuNTM4NyAxMy45NzMgMTUuNDM3MSAxMi4wODQ0IDEzLjU4NjlMMTEuMTYxMSAxMi42Njg5TDEwLjkyMzMgMTMuMzQ2OEMxMC40MTk3IDE0Ljg1OCAxMC43NDE0IDE2LjQ1NCAxMS43OTA3IDE3LjUyNzRDMTIuMzUwMyAxOC4xMjA1IDEyLjIyNDMgMTguMjA1MyAxMS4yNTkxIDE3Ljg1MjJDMTAuOTIzMyAxNy43MzkyIDEwLjYyOTUgMTcuNjU0NSAxMC42MDE2IDE3LjY5NjhDMTAuNTAzNiAxNy43OTU3IDEwLjgzOTQgMTkuMDgwOSAxMS4xMDUyIDE5LjU4OTRDMTEuNDY4OSAyMC4yOTU1IDEyLjIxMDQgMjAuOTg3NiAxMy4wMjE4IDIxLjM5NzJMMTMuNzA3MiAyMS43MjJMMTIuODk1OCAyMS43MzYxQzEyLjExMjQgMjEuNzM2MSAxMi4wODQ0IDIxLjc1MDIgMTIuMTY4NCAyMi4wNDY4QzEyLjQ0ODIgMjIuOTY0OSAxMy41NTM0IDIzLjkzOTQgMTQuNzg0NCAyNC4zNjMxTDE1LjY1MTggMjQuNjU5N0wxNC44OTY0IDI1LjExMTZDMTMuNzc3MiAyNS43NjEzIDEyLjQ2MjIgMjYuMTI4NSAxMS4xNDcxIDI2LjE1NjdDMTAuNTE3NiAyNi4xNzA5IDEwIDI2LjIyNzMgMTAgMjYuMjY5N0MxMCAyNi40MTEgMTEuNzA2NyAyNy4yMDE5IDEyLjcgMjcuNTEyNkMxNS42Nzk4IDI4LjQzMDYgMTkuMjE5MSAyOC4wMzUxIDIxLjg3NzIgMjYuNDY3NEMyMy43NjU4IDI1LjM1MTcgMjUuNjU0MyAyMy4xMzQzIDI2LjUzNTcgMjAuOTg3NkMyNy4wMTEzIDE5Ljg0MzYgMjcuNDg3IDE3Ljc1MzMgMjcuNDg3IDE2Ljc1MDZDMjcuNDg3IDE2LjEwMDkgMjcuNTI5IDE2LjAxNjIgMjguMzEyNCAxNS4yMzk0QzI4Ljc3NCAxNC43ODc0IDI5LjIwNzcgMTQuMjkzMSAyOS4yOTE2IDE0LjE1MTlDMjkuNDMxNSAxMy44ODM1IDI5LjQxNzUgMTMuODgzNSAyOC43MDQxIDE0LjEyMzZDMjcuNTE1IDE0LjU0NzMgMjcuMzQ3MSAxNC40OTA4IDI3LjkzNDYgMTMuODU1M0MyOC4zNjgzIDEzLjQwMzMgMjguODg1OSAxMi41ODQyIDI4Ljg4NTkgMTIuMzQ0MUMyOC44ODU5IDEyLjMwMTcgMjguNjc2MSAxMi4zNzIzIDI4LjQzODMgMTIuNDk5NEMyOC4xODY1IDEyLjY0MDcgMjcuNjI2OSAxMi44NTI1IDI3LjIwNzIgMTIuOTc5NkwyNi40NTE4IDEzLjIxOTdMMjUuNzY2MyAxMi43NTM3QzI1LjM4ODUgMTIuNDk5NCAyNC44NTY5IDEyLjIxNyAyNC41NzcxIDEyLjEzMjJDMjMuODYzNyAxMS45MzQ1IDIyLjc3MjUgMTEuOTYyNyAyMi4xMjkgMTIuMTg4N0MyMC4zODAzIDEyLjgyNDMgMTkuMjc1MSAxNC40NjI2IDE5LjQwMSAxNi4yNTYzWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=" alt="twitter"></a>
+        <a class="stamped-share-link" href="https://www.facebook.com/v2.12/dialog/send?app_id=222664514734026&fallback_redirect_uri=!!REF!!&link=!!REF!!&redirect_uri=!!REF!!"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMjFDMSA5Ljk1NDMxIDkuOTU0MzEgMSAyMSAxQzMyLjA0NTcgMSA0MSA5Ljk1NDMxIDQxIDIxQzQxIDMyLjA0NTcgMzIuMDQ1NyA0MSAyMSA0MUM5Ljk1NDMxIDQxIDEgMzIuMDQ1NyAxIDIxWiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzAwODRGRiIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjEgOUMxNC4zNzI2IDkgOSAxMy45NzQ2IDkgMjAuMTExMUM5IDIzLjYwNzggMTAuNzQ1IDI2LjcyNjcgMTMuNDcyIDI4Ljc2MzVWMzNMMTcuNTU3OSAzMC43NTc2QzE4LjY0ODQgMzEuMDU5MyAxOS44MDM2IDMxLjIyMjIgMjEgMzEuMjIyMkMyNy42Mjc0IDMxLjIyMjIgMzMgMjYuMjQ3NiAzMyAyMC4xMTExQzMzIDEzLjk3NDYgMjcuNjI3NCA5IDIxIDlaTTIxLjg3NzIgMjMuNjY2N0wxOC44NjkyIDIwLjU0NjFMMTMgMjMuNjY2N0wxOS40NTYxIDE3TDIyLjUzNzUgMjAuMTIwNkwyOC4zMzMzIDE3TDIxLjg3NzIgMjMuNjY2N1oiIGZpbGw9IiMwMDg0RkYiLz48L3N2Zz4=" alt="messenger"></a>
+        <a onclick="StampedFn.toggleLauncher(1); StampedFn.loadLauncherView('view-referrals-email', this);"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMjFDMSA5Ljk1NDMxIDkuOTU0MzEgMSAyMSAxQzMyLjA0NTcgMSA0MSA5Ljk1NDMxIDQxIDIxQzQxIDMyLjA0NTcgMzIuMDQ1NyA0MSAyMSA0MUM5Ljk1NDMxIDQxIDEgMzIuMDQ1NyAxIDIxWiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iI0Q1NEIzRCIvPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPjxwYXRoIGQ9Ik0zMS4zOTA3IDMwLjU1OThIMTAuNTE0NEM5LjcwNSAzMC41NTk4IDkuMDIzNDQgMjkuODYyNyA5LjAyMzQ0IDI4Ljk4NTZWMTMuMDY0MUM5LjAyMzM0IDEyLjIwOTUgOS42ODM2MiAxMS40ODk5IDEwLjUxNDQgMTEuNDg5OUgzMS4zOTA3QzMyLjIwMDEgMTEuNDg5OSAzMi44ODE5IDEyLjE4NyAzMi44ODE5IDEzLjA2NDFWMjguOTg1NkMzMi44ODE5IDI5Ljg2MjcgMzIuMjIxNSAzMC41NTk4IDMxLjM5MDcgMzAuNTU5OFoiIGZpbGw9IiNFM0UzRTMiLz48cGF0aCBvcGFjaXR5PSIwLjEiIGQ9Ik0xMi4wMDU0IDMwLjU1OTdMMjAuOTMxIDIyLjk4MTJMMjAuOTk1IDIyLjU3NjRMMTEuNzkyNCAxNS41ODI2TDExLjc3MSAzMC4yMjI0TDEyLjAwNTQgMzAuNTU5N1oiIGZpbGw9IiMyMzFGMjAiLz48cGF0aCBkPSJNMTAuNTE0NSAzMC41NjAyQzkuNjgzNzIgMzAuNTYwMiA5LjAyMzQ0IDI5Ljg2MzEgOS4wMjM0NCAyOC45ODZWMTMuMDQxOUM5LjAyMzQ0IDEyLjE2NDkgOS42ODM3MiAxMi4wMDc0IDEwLjUxNDUgMTIuMDA3NEMxMS4zNDUzIDEyLjAwNzQgMTIuMDA1NyAxMi4xODc0IDEyLjAwNTcgMTMuMDQxOVYzMC41NjAySDEwLjUxNDVaIiBmaWxsPSIjRDU0QjNEIi8+PHBhdGggZD0iTTEwLjUxNDQgMTIuMjMyM0MxMS41Nzk1IDEyLjIzMjMgMTEuNzkyNiAxMi41Njk3IDExLjc5MjYgMTMuMDQxOVYzMC4zMzUzSDEwLjUxNDRDOS44MTE1IDMwLjMzNTMgOS4yMzYzNCAyOS43MjgyIDkuMjM2MzQgMjguOTg2VjEzLjA0MTlDOS4yMzYzNCAxMi41NDcxIDkuNDQ5MzQgMTIuMjMyMyAxMC41MTQ0IDEyLjIzMjNaTTEwLjUxNDQgMTIuMDA3NEM5LjY4MzYyIDEyLjAwNzQgOS4wMjM0NCAxMi4xODc0IDkuMDIzNDQgMTMuMDQxOVYyOC45ODYxQzkuMDIzNDQgMjkuODYzMiA5LjY4MzcyIDMwLjU2MDMgMTAuNTE0NSAzMC41NjAzSDEyLjAwNTZWMTMuMDQxOUMxMi4wMDU2IDEyLjE2NDkgMTEuMzQ1MyAxMi4wMDc0IDEwLjUxNDQgMTIuMDA3NFoiIGZpbGw9IiNENzJCMjciLz48cGF0aCBkPSJNMzEuMzkwNiAzMC41NjAySDI5Ljg5OTRWMTIuOTk2OUMyOS44OTk0IDEyLjExOTkgMzAuNTU5OCAxMi4wMDc0IDMxLjM5MDYgMTIuMDA3NEMzMi4yMjE0IDEyLjAwNzQgMzIuODgxOCAxMi4xMTk5IDMyLjg4MTggMTIuOTk2OVYyOS4wMDg2QzMyLjg4MTggMjkuODYzMSAzMi4yMjE0IDMwLjU2MDIgMzEuMzkwNiAzMC41NjAyWiIgZmlsbD0iI0Q1NEIzRCIvPjxwYXRoIGQ9Ik0zMS4zOTA2IDEyLjIzMjNDMzIuMzQ5MiAxMi4yMzIzIDMyLjY2ODcgMTIuNDM0NyAzMi42Njg3IDEyLjk5NjlWMjkuMDA4NkMzMi42Njg3IDI5Ljc1MDYgMzIuMDkzNSAzMC4zNTc4IDMxLjM5MDYgMzAuMzU3OEgzMC4xMTI0VjEyLjk5NjlDMzAuMTEyNCAxMi40MTIyIDMwLjQzMiAxMi4yMzIzIDMxLjM5MDYgMTIuMjMyM1pNMzEuMzkwNiAxMi4wMDc0QzMwLjU1OTggMTIuMDA3NCAyOS44OTk0IDEyLjExOTkgMjkuODk5NCAxMi45OTY5VjMwLjU4MjhIMzEuMzkwNkMzMi4yMjE0IDMwLjU4MjggMzIuODgxOCAyOS44ODU1IDMyLjg4MTggMjkuMDA4NlYxMi45OTY5QzMyLjg4MTggMTIuMTE5OSAzMi4yMjE0IDEyLjAwNzQgMzEuMzkwNiAxMi4wMDc0WiIgZmlsbD0iI0Q3MkIyNyIvPjxwYXRoIGQ9Ik0yNC45OTk5IDMwLjU2MDFMOS4xNDc5NSAxMy42OTU4TDkuOTgxNzYgMTQuMDUzN0wyMS4wMTYzIDIyLjQ0MTlMMzIuODgxNyAxMy4yNTY4VjI5LjAwODVDMzIuODgxNyAyOS44NjMgMzIuMjIxMyAzMC41NjAxIDMxLjM5MDUgMzAuNTYwMUgyNC45OTk5WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPjxwYXRoIGQ9Ik0yMC45MzE0IDIyLjk4MTRMOS42NjI0OCAxNC4zNDZDOS4wMDIxIDEzLjgyODggOC44MTAzOCAxMi44MzkzIDkuMzAwMzIgMTIuMTQyMkM5Ljc5MDQ1IDExLjQ0NSAxMC43NDg5IDExLjI4NzcgMTEuNDMwNiAxMS44MDQ5TDIwLjk1MjggMTkuMTEzNUwzMC41Mzg2IDExLjcxNDhDMzEuMTk5IDExLjE5NzYgMzIuMTM2MyAxMS4zNTUxIDMyLjYyNjMgMTIuMDc0N0MzMy4xMTYyIDEyLjc3MTggMzIuOTY3MSAxMy43NjEzIDMyLjI4NTQgMTQuMjc4NUwyMC45MzEzIDIyLjk4MTNMMjAuOTMxNCAyMi45ODE0WiIgZmlsbD0iI0Q1NEIzRCIvPjxwYXRoIGQ9Ik0zMS4zOSAxMS42MjQ5QzMxLjc5NDcgMTEuNjI0OSAzMi4xNzgxIDExLjgyNzMgMzIuNDMzOCAxMi4xODdDMzIuODM4NSAxMi43OTQzIDMyLjcxMDcgMTMuNjI2MyAzMi4xNTY4IDE0LjA3NjFMMjAuOTMwNiAyMi43MTE2TDkuNzg5NSAxNC4xNjYxQzkuMjE0MzUgMTMuNzE2MyA5LjA2NTE5IDEyLjg2MTcgOS40Njk5MSAxMi4yNzcxQzkuNzA0MjggMTEuOTM5NyAxMC4xMDkgMTEuNzE0OSAxMC41MzUgMTEuNzE0OUMxMC44MTE5IDExLjcxNDkgMTEuMDg4OSAxMS44MDQ4IDExLjMwMTkgMTEuOTg0N0wyMC44MDI4IDE5LjI3MDhMMjAuOTMwNiAxOS4zNjA5TDIxLjA1ODMgMTkuMjcwOEwzMC42MjMxIDExLjg3MjNDMzAuODU3NSAxMS43MTQ5IDMxLjExMyAxMS42MjQ5IDMxLjM5IDExLjYyNDlaTTMxLjM5IDExLjRDMzEuMDkxOCAxMS40IDMwLjc3MjIgMTEuNDkgMzAuNTE2NiAxMS42OTI0TDIwLjkzMDYgMTkuMDkwOUwxMS40MDg0IDExLjc4MjNDMTEuMTUyOSAxMS41OCAxMC44MzM0IDExLjQ5IDEwLjUxMzggMTEuNDlDMTAuMDQ1MiAxMS40OSA5LjU3NjUgMTEuNzE0OCA5LjI3ODI4IDEyLjE0MjJDOC44MDk2MyAxMi44MzkyIDkuMDAxMzUgMTMuODI4NyA5LjY2MTcyIDE0LjM0NTlMMjAuOTMwNyAyMy4wMDRMMzIuMjYzMyAxNC4yNzg1QzMyLjkyMzcgMTMuNzYxMyAzMy4wNzI5IDEyLjc5NDMgMzIuNjA0MiAxMi4wNzQ3QzMyLjMwNiAxMS42MjQ5IDMxLjg1ODYgMTEuNCAzMS4zOSAxMS40WiIgZmlsbD0iI0Q3MkIyNyIvPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSI5LjE0ODkiIHkxPSIyMS45MDgxIiB4Mj0iMzIuODg5MyIgeTI9IjIxLjkwODEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLW9wYWNpdHk9IjAuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIwLjIiLz48L2xpbmVhckdyYWRpZW50PjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIxOS4yIiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOSAxMS40KSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==" alt="gmail"></a>
+      </div>
+      <p>or</p>
+      <button class="btn_blue copy-ref-link-button">Copy my unique link</button>
+    </div>
+
+    <div class="birthday popup">
+      <div class="close_popup"></div>
+      <h2>A Gift for your Birthday!</h2>
+      <p>Add your Birthday and your present of 200 Zees will arrive X days before!</p>
+      <div class="flx">
+        <select name="day" id="birthday-day"></select>
+        <select name="month" id="birthday-month">
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <select name="year" id="birthday-year"></select>
+      </div>
+      <button class="btn_blue">Save my Birthday</button>
+    </div>
+  </div>
+
+  <style>
+    .btn-loading {
+      pointer-events: none;
+      filter: grayscale(100%);
+      transition: .3s;
+    }
+  </style>
+  <!-- <script>
+    window.stamped_debug = 1;
+    window.stamped_debug_level = 3;
+  </script> -->
+
+  <script>
+    $('.tabs>p').click(function () {
+      let index = $(this).index()
+      if (!$(this).hasClass('active')) {
+        $(this).siblings('p').removeClass('active')
+        $(this).addClass('active').closest('.history').find('.content').children().eq(index).addClass('active').siblings().removeClass('active')
+        console.log($(this).addClass('active').closest('history').find('.content'))
+      }
+    })
+
+    $('.close_popup').click(function () {
+      $(this).closest('.popup').removeClass('active')
+      $('.bg').removeClass('active')
+    })
+
+    $('.look_history').click(function () {
+      $('.history').addClass('active')
+      $('.bg').addClass('active')
+    })
+
+    $('.to_refer').click(function () {
+      $('.refer').addClass('active')
+      $('.bg').addClass('active')
+    })
+
+    $('.to_birthday').click(function () {
+      $('.birthday').addClass('active')
+      $('.bg').addClass('active')
+    })
+ </script>
