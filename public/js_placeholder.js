@@ -1,4 +1,6 @@
-var APP_API_URL = "http://localhost:3000/api/";
+// var APP_API_URL = "http://localhost:3000/api/";
+var APP_API_URL = "https://somni.vercel.app/api/";
+
 const API_URL = "https://stamped.io/api/";
 var generate_reward_away_message = true;
 
